@@ -62,7 +62,7 @@ func runClipboard(clipboard, content string) {
 		os.Exit(1)
 	}
 
-	io.WriteString(stdin, content+"\n")
+	io.WriteString(stdin, content)
 	stdin.Close()
 
 	if err := cmd.Wait(); err != nil {
